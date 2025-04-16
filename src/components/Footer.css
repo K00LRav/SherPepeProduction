@@ -1,0 +1,71 @@
+/* src/components/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root {
+  --yellow-sherpepe: #e6a803;
+  --black-sherpepe: #2b2b2b;
+  --smoke-sherpepe: #f5f5f5;
+}
+
+.footer {
+  background: linear-gradient(135deg, var(--black-sherpepe) 0%, #1a1a1a 100%);
+  color: var(--yellow-sherpepe);
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Reduced from 20px to tighten spacing with smaller icons */
+}
+
+.social-icon {
+  color: var(--yellow-sherpepe);
+  font-size: 1.3rem; /* Smaller size, ~19.2px */
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffcc00;
+  transform: scale(1.2) rotate(10deg);
+  text-shadow: 0 0 10px rgba(230, 168, 3, 0.8);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1rem; /* Smaller on mobile, ~16px */
+  }
+}

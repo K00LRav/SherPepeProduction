@@ -1,0 +1,22 @@
+/* src/App.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6a803; /* --yellow-sherpepe as default */
+}
+
+.app > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: Add spacing between sections */
+.app > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Ensure footer sticks to bottom */
+.footer {
+  margin-top: auto;
+}

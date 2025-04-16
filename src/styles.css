@@ -1,0 +1,128 @@
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/* Global Styles */
+:root {
+  --yellow-sherpepe: #e6a803;
+  --black-sherpepe: #2b2b2b;
+  --smoke-sherpepe: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--yellow-sherpepe);
+  color: var(--black-sherpepe);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Luckiest Guy', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--black-sherpepe);
+  color: var(--yellow-sherpepe);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--yellow-sherpepe);
+  color: var(--black-sherpepe);
+  border: 1px solid var(--black-sherpepe);
+}
+
+/* Comics Gallery */
+.comics-gallery {
+  padding: 40px 20px;
+  background-color: var(--black-sherpepe);
+  color: var(--yellow-sherpepe);
+  width: 100%;
+  overflow: hidden;
+}
+
+.comics-gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+}
+
+.comic-card {
+  text-align: center;
+  border: 2px solid var(--yellow-sherpepe);
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  background-color: var(--black-sherpepe);
+  color: var(--yellow-sherpepe);
+  box-sizing: border-box;
+}
+
+.comic-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.comic-card:hover {
+  transform: scale(1.05);
+  background-color: var(--yellow-sherpepe);
+  color: var(--black-sherpepe);
+}
+
+/* Social Posts */
+.social-posts {
+  padding: 20px;
+  background-color: var(--yellow-sherpepe);
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.social-posts h2 {
+  margin-bottom: 20px;
+}
+
+/* Comic Card Description */
+.comic-card p {
+  font-size: 1rem;
+  margin: 10px 0 0;
+  line-height: 1.5;
+  color: var(--yellow-sherpepe);
+  background: var(--black-sherpepe);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .comics-gallery .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
